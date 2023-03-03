@@ -1,0 +1,104 @@
+body{
+    background: url("../images/initialBackground.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.backRectangle{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(50, 50, 50, 0.5);
+}
+.logo{
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 26.6em;
+    width: 23.3em;
+}
+
+.slogan{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: -0.035em -0.035em 0 #000, 0.035em -0.035em 0 #000, -0.035em 0.035em 0 #000, 0.035em 0.035em 0 #000;
+}
+
+.btn{
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12em;
+    height: 2.3em;
+    border-radius: 0.5em;
+    background-color: #660099;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em;
+    transition: 0.2s background-color;
+}
+
+.btn:hover{
+    background-color: blue;
+}
+
+.btn:active{
+    background-color: red;
+}
+
+@media screen and (max-width: 65em) {
+    .backRectangle{
+        width: 26em;
+    }
+}
+
+@media screen and (max-height: 50em) {
+    .slogan{
+        font-size: 2em;
+        top: 62%;
+    }
+    .logo{
+        top: 30%;
+    }
+    .btn{
+        height: 2em;
+        width: 10em;
+    }
+}
+
+@media screen and (max-height: 42em) {
+    .slogan{
+        opacity: 0%;
+    }
+    .logo{
+        height: 20em;
+        width: 16.7em;
+        top: 37%;
+    }
+}
+
+@media screen and (max-height: 25em) {
+    .logo{
+        opacity: 0%;
+    }
+    .btn{
+        top: 50%;
+    }
+}

@@ -6,6 +6,7 @@ import './App.css';
 
 function App() {
   return (
+    document.title = 'Test',
     <BrowserRouter>
       <Routes>
         <Route index element={<Landing/>} />

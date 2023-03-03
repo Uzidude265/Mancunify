@@ -1,6 +1,5 @@
 import styles from './Signup.module.css';
-import Logo from '../images/logo.png';
-import {Initial, TabTitle} from '../GeneralFunctions.js';
+import {LogoImage, Initial, TabTitle} from '../GeneralFunctions.js';
 
 export default function Login() {
     TabTitle("Mancunify - Signup");
@@ -8,7 +7,7 @@ export default function Login() {
         <>
         <Initial/>
 
-        <a href="/"><img src={Logo} alt="Mancunify Logo" className={styles.logo} /></a>
+        <a href="/"><LogoImage style={styles}/></a>
         <div className={styles.signupBox}>
             <h1 className={styles.title}>Sign Up:</h1>
             <form className={styles.signupArea}>

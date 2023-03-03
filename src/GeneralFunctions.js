@@ -1,12 +1,10 @@
-/*
 import Logo from './images/logo.png';
 
-export function LogoImage() {
+export function LogoImage({style}) {
     return (
-        <img src={Logo} alt="Mancunify Logo"/>
+        <img className={style.logo} src={Logo} alt="Mancunify Logo"/>
     );
 }
-*/
 
 export function Initial() {
     return (

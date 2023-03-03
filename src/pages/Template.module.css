@@ -1,0 +1,60 @@
+/* Used for the general template of the pages that stays the same */
+
+.module{
+    color: rgb(195, 192, 192);
+    text-align: center;
+    font-size: 2em;
+    padding: 0.4em 0 0 0;
+    margin: 0 0 0.4em 0;
+    height: 1.5em;
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 0.5em;
+}
+
+.module:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.module:active{
+    background-color: rgba(191, 0, 255, 0.5);
+}
+
+.space{
+    margin: 0 0 7em 0;
+}
+
+.logo{
+    width: 12.4em;
+    height: 14.5em;
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 1em;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.35em;
+}
+
+.logoArea{
+    padding: 3em 0 0 0;
+    margin: 0 0 3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    position: absolute;
+    left: 3em;
+    width: 17em;
+}
+
+.infoArea{
+    background-color: rgba(236, 224, 254, 0.8);
+    border-radius: 2em;
+    position: absolute;
+    height: 90%;
+    width: 78%;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+}

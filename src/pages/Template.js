@@ -2,30 +2,30 @@
 import { LogoImage } from '../GeneralFunctions';
 import template from './Template.module.css';
 
-export function SidebarModule({title, destination}) {
-    return (<div className={template.module} onClick={destination}> {title} </div>);
+export function SidebarModule({title, destination, pageName}) {
+
+    if (title == pageName) {
+        return (<div className={template.module} style={{backgroundColor: `rgba(121, 1, 145, 0.5)`, color: "white", cursor: "default"}}> {title} </div>);
+    }
+    else {
+        return (<div className={template.module} onClick={destination}> {title} </div>);
+    }
+
 }
 
-export function Sidebar() {
-    return(
-        <div className={template.sidebar}>
-        <div className={template.logoArea}><LogoImage style={template} /></div>
-        <SidebarModule title="My Dashboard" destination={event => window.location.href='./dashboard'} />
-        <SidebarModule title="Uni Charts" destination={event => window.location.href='./charts'} />
-        <SidebarModule title="My Friends" destination={event => window.location.href='./friends'} />
-        <SidebarModule title="My Account" destination={event => window.location.href='./account'} />
-        <SidebarModule title="My Profile" destination={event => window.location.href='./profile'} />
-        <div className={template.space}></div>
-        <SidebarModule title="Log Out" destination={event => window.location.href='/'} />
-        </div>
-    );
-}
-
-export function Template() {
+export function Sidebar({pageName}) {
     return(
         <>
-        <div className={template.infoArea}></div>
-        <Sidebar />
+        <div className={template.sidebar}>
+        <div className={template.logoArea}><LogoImage style={template} /></div>
+        <SidebarModule title="My Dashboard" destination={event => window.location.href='./dashboard'} pageName={pageName} />
+        <SidebarModule title="Uni Charts" destination={event => window.location.href='./charts'} pageName={pageName} />
+        <SidebarModule title="My Friends" destination={event => window.location.href='./friends'} pageName={pageName} />
+        <SidebarModule title="My Account" destination={event => window.location.href='./account'} pageName={pageName} />
+        <SidebarModule title="My Profile" destination={event => window.location.href='./profile'} pageName={pageName} />
+        <div className={template.space}></div>
+        <SidebarModule title="Log Out" destination={event => window.location.href='/'} pageName={pageName} />
+        </div>
         </>
     );
 }

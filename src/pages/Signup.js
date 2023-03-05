@@ -1,5 +1,5 @@
 import styles from './Signup.module.css';
-import {LogoImage, Initial, TabTitle} from '../GeneralFunctions.js';
+import { LogoImage, Initial, TabTitle } from '../GeneralFunctions.js';
 
 export default function Login() {
     TabTitle("Mancunify - Signup");

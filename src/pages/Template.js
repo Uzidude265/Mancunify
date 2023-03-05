@@ -4,7 +4,7 @@ import template from './Template.module.css';
 
 export function SidebarModule({title, destination, pageName}) {
 
-    if (title == pageName) {
+    if (title === pageName) {
         return (<div className={template.module} style={{backgroundColor: `rgba(121, 1, 145, 0.5)`, color: "white", cursor: "default"}}> {title} </div>);
     }
     else {

@@ -47,8 +47,8 @@ export default function Login() {
             }
             //  If email is valid and passwords match, redirect to OTP page (needs to be made)
             else {
-                errorBox.textContent = "Email Sent!";
-                errorBox.style.display = "block";
+                errorBox.style.display = "none";
+                window.location.href = "/otp";
             }
 
         }
@@ -63,7 +63,7 @@ export default function Login() {
         <div className={styles.signupBox}>
             <h1 className={styles.title}>Sign Up:</h1>
             <form className={styles.signupArea} onSubmit={handleSubmit}>
-                <div className={styles.errorBox}>Test</div>
+                <div className={styles.errorBox}></div>
                 <div className={styles.inputField}>
                 <label>University Email</label>
                 <input type="text" name="email" required />
@@ -76,7 +76,7 @@ export default function Login() {
                 <label>Retype Password</label>
                 <input type="password" name="rePassword" required />
                 </div>
-                <input className={styles.btn} type="Submit" defaultValue="Login" />
+                <input className={styles.btn} type="Submit" defaultValue="Create Account" />
                 <div className={styles.login}>
                 Already have an account? <a className={styles.loginLink} href="/login">Log in</a>
                 </div>

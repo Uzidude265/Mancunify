@@ -21,15 +21,20 @@ export default function Login() {
         const errorBox = document.querySelector(`.${styles.errorBox}`);
 
         //  Database checks should go here:
-        //  If username and password not in database, show error
-        if (username === "error" && password === "error") {
-            errorBox.textContent = "Username or password is incorrect";
-            errorBox.style.display = "block";
-        }
-        //  If username and password are valid, redirect to dashboard
-        else if (username !== "" && password !== "") {
-            errorBox.style.display = "none";
-            window.location.href = './dashboard';
+        //  React runs this function on page start so this prevents that
+        if (username !== "" && password !== "") {
+
+            //  If username and password not in database, show error
+            if (username === "error" && password === "error") {
+                errorBox.textContent = "Username or password is incorrect";
+                errorBox.style.display = "block";
+            }
+            //  If username and password are valid, redirect to dashboard
+            else {
+                errorBox.style.display = "none";
+                window.location.href = './dashboard';
+            }
+
         }
 
     })

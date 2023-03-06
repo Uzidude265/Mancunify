@@ -22,27 +22,35 @@ export default function Login() {
         //  Get the error box class
         const errorBox = document.querySelector(`.${styles.errorBox}`);
 
-        //  If passwords do not match, show error
-        if (password !== rePassword) {
-            errorBox.textContent = "Passwords do not match";
-            errorBox.style.display = "block";
-        }
-        //  If email is not a student email, show error
-        else if (email === "notStudent") {
-            errorBox.textContent = "Email is not a student email";
-            errorBox.style.display = "block";
-        }
+        //  Regex for student email
+        const regex = /[\w-]+@student.manchester.ac.uk/;
 
-        //  Need to attempt to send email here somehow
-        //  If email didn't go through, show error
-        else if (email === "failed") {
-            errorBox.textContent = "Email is invalid";
-            errorBox.style.display = "block";
-        }
-        //  If email is valid and passwords match, redirect to OTP page (needs to be made)
-        else if (email !== "" && password !== "" && rePassword !== "") {
-            errorBox.textContent = "Email Sent!";
-            errorBox.style.display = "block";
+        //  React runs this function on page start so this prevents that
+        if (email !== "" && password !== "" && rePassword !== "") {
+
+            //  If passwords do not match, show error
+            if (password !== rePassword) {
+                errorBox.textContent = "Passwords do not match";
+                errorBox.style.display = "block";
+            }
+            //  If email is not a student email, show error
+            else if (!regex.test(email)) {
+                errorBox.textContent = "Email is not a student email";
+                errorBox.style.display = "block";
+            }
+
+            //  Need to attempt to send email here somehow
+            //  If email didn't go through, show error
+            else if (email === "failed@student.manchester.ac.uk") {
+                errorBox.textContent = "Email is invalid";
+                errorBox.style.display = "block";
+            }
+            //  If email is valid and passwords match, redirect to OTP page (needs to be made)
+            else {
+                errorBox.textContent = "Email Sent!";
+                errorBox.style.display = "block";
+            }
+
         }
 
     })

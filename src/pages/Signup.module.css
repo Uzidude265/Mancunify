@@ -32,6 +32,17 @@
     box-sizing: border-box;
 }
 
+.errorBox{
+    border-style: solid;
+    border-color: red;
+    border-radius: 0.5em;
+    background-color: rgba(255, 134, 144, 0.5);
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 0 1.5em 0;
+    display: none;
+}
+
 .inputField input{
     margin: 1em 0;
     width: 100%;
@@ -44,7 +55,7 @@
 }
 
 .btn{
-    margin: 1.75em 0 0 0;
+    margin: 1em 0 0 0;
     background-color: #660099;
     color: white;
     font-family: "Montserrat", sans-serif;
@@ -65,7 +76,7 @@
 
 .login{
     text-align: center;
-    margin: 2.25em 0;
+    margin: 1.5em 0 1em 0;
 }
 
 .loginLink, .loginLink:link{

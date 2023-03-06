@@ -1,0 +1,135 @@
+.logo{
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 1em;
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13.4em;
+    height: 15.5em;
+}
+
+.verifyBox{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(50, 50, 50, 0.5);
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 1.5em;
+    width: 30em;
+}
+
+.title{
+    text-align: center;
+    padding: 0 0 0.7em 0;
+    border-bottom: 0.05em solid black;
+}
+
+.verifyArea{
+    padding: 0 3em 1em 3em;
+    box-sizing: border-box;
+}
+
+.errorBox{
+    border-style: solid;
+    border-color: red;
+    border-radius: 0.5em;
+    background-color: rgba(255, 134, 144, 0.5);
+    text-align: center;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 0 1.5em 0;
+    display: none;
+}
+
+.first{
+    margin: 0.5em 0.2em 0.7em 1.2em;
+    width: 1em;
+    height: 2em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(150, 150, 150, 0.5);
+    border-style: solid;
+    border-radius: 0.2em;
+    color: white;
+    outline: none;
+    transition: 0.3s border-color;
+}
+
+.first:focus{
+    border-color: white;
+}
+
+.rest{
+    margin: 0.5em 0.2em 0.7em 0.2em;
+    width: 1em;
+    height: 2em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(150, 150, 150, 0.5);;
+    border-style: solid;
+    border-radius: 0.2em;
+    color: white;
+    outline: none;
+    transition: 0.3s border-color;
+}
+
+.rest:focus{
+    border-color: white;
+}
+
+.inputField p{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.5em 0 0 0;
+}
+
+.btn{
+    margin: 1em 0 0.5em 1.6em;
+    background-color: #660099;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+    width: 80%;
+    height: 2em;
+    border-radius: 0.5em;
+    transition: 0.2s background-color;
+}
+
+.btn:hover{
+    background-color: blue;
+}
+
+.btn:active{
+    background-color: red;
+}
+
+.resend{
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.resendLink, .resendLink:link{
+    color: blue;
+    text-decoration: none;
+}
+
+.resendLink:hover{
+    color: red;
+}
+
+@media screen and (max-height: 800px) {
+
+    .logo{
+        opacity: 0%;
+    }
+
+    .loginBox{
+        top: 50%;
+        left: 50%;
+    }
+
+}

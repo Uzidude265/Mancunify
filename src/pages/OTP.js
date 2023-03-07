@@ -5,13 +5,13 @@ import { useState, useEffect } from 'react';
 export default function OTP() {
 
     //  TEST VALUE
-    const testCode = 123456;
+    const testCode = "123456";
 
     function inputHandler(e) {
         if (e.target.value.length === 6) {
             const errorBox = document.querySelector(`.${styles.errorBox}`);
             const code = e.target.value;
-            if (code == testCode) {
+            if (code === testCode) {
                 errorBox.textContent = "Code Matches!";
                 errorBox.style.display = "block";
             }

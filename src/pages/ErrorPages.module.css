@@ -1,0 +1,84 @@
+.thePage {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.errorType {
+    max-width: 497px;
+    color: rgba(102, 0, 153, 1);
+    font-size: 260px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+.oops {
+    max-width: 622px;
+    margin-top: 32px;
+    color: rgba(102, 0, 153, 1);
+    font-size: 42px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+.description {
+    max-width: 920px;
+    margin-top: 32px;
+    color: rgba(102, 0, 153, 1);
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    max-width: 1157px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 41px;
+    padding-right: 378px;
+    padding-left: 378px;
+}
+.homepageBtn {
+    display: flex;
+    flex-direction: column;
+    max-width: 89px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 31px;
+    padding: 20px 50px;
+    border-color: rgba(151, 151, 151, 1);
+    border-style: solid;
+    background-color: rgba(102, 0, 153, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+.goBackBtn {
+    display: flex;
+    flex-direction: column;
+    max-width: 89px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    border-radius: 31px;
+    padding: 20px 50px;
+    border-color: rgba(151, 151, 151, 1);
+    border-style: solid;
+    background-color: rgba(102, 0, 153, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}

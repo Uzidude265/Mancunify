@@ -8,8 +8,12 @@ import Friends from './pages/Friends.js';
 import Account from './pages/Account.js';
 import Profile from './pages/Profile.js';
 import OTP from './pages/OTP.js';
-import OTPFancy from './pages/OTPFancy.js';
 import './App.css';
+
+//  Code for the fancier OTP page
+//  import OTPFancy from './pages/OTPFancy.js';
+//  <Route path="otpfancy" element={<OTPFancy/>} />
+
 
 function App() {
   return (
@@ -25,8 +29,6 @@ function App() {
         <Route path="account" element={<Account/>} />
         <Route path="profile" element={<Profile/>} />
         <Route path="otp" element={<OTP/>} />
-        <Route path="otpfancy" element={<OTPFancy/>} />
-
       </Routes>
     </BrowserRouter>
   );

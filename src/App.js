@@ -17,7 +17,7 @@ import './App.css';
 
 function App() {
   return (
-    document.title = 'Test',
+    document.title = 'Error',
     <BrowserRouter>
       <Routes>
         <Route index element={<Landing/>} />

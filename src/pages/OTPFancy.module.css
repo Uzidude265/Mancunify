@@ -2,14 +2,14 @@
     background-color: rgba(50, 50, 50, 0.5);
     border-radius: 1em;
     position: absolute;
-    top: 17%;
+    top: 19%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 13.4em;
     height: 15.5em;
 }
 
-.signupBox{
+.verifyBox{
     position: absolute;
     top: 65%;
     left: 50%;
@@ -18,7 +18,7 @@
     border-style: solid;
     border-color: rgba(0, 0, 0, 1);
     border-radius: 1.5em;
-    width: 25em;
+    width: 30em;
 }
 
 .title{
@@ -27,8 +27,8 @@
     border-bottom: 0.05em solid black;
 }
 
-.signupArea{
-    padding: 1em 3em;
+.verifyArea{
+    padding: 0 3em 1em 3em;
     box-sizing: border-box;
 }
 
@@ -43,24 +43,57 @@
     display: none;
 }
 
-.inputField input{
-    margin: 1em 0;
-    width: 100%;
+.first{
+    margin: 0.5em 0.2em 0.7em 1.2em;
+    width: 1em;
     height: 2em;
     font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(150, 150, 150, 0.5);
+    border-style: solid;
+    border-radius: 0.2em;
+    color: white;
+    outline: none;
+    transition: 0.3s border-color;
 }
 
-.inputField label{
-    font-size: 1.2em;
+.first:focus{
+    border-color: white;
+}
+
+.rest{
+    margin: 0.5em 0.2em 0.7em 0.2em;
+    width: 1em;
+    height: 2em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(150, 150, 150, 0.5);;
+    border-style: solid;
+    border-radius: 0.2em;
+    color: white;
+    outline: none;
+    transition: 0.3s border-color;
+}
+
+.rest:focus{
+    border-color: white;
+}
+
+.inputField p{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.5em 0 0 0;
 }
 
 .btn{
-    margin: 1em 0 0 0;
+    margin: 1em 0 0.5em 1.6em;
     background-color: #660099;
     color: white;
     font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
-    width: 100%;
+    width: 80%;
     height: 2em;
     border-radius: 0.5em;
     transition: 0.2s background-color;
@@ -74,27 +107,27 @@
     background-color: red;
 }
 
-.login{
+.resend{
     text-align: center;
-    margin: 1.5em 0 1em 0;
+    margin: 1.5em 0;
 }
 
-.loginLink, .loginLink:link{
+.resendLink, .resendLink:link{
     color: blue;
     text-decoration: none;
 }
 
-.loginLink:hover{
+.resendLink:hover{
     color: red;
 }
 
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 800px) {
 
     .logo{
         opacity: 0%;
     }
 
-    .signupBox{
+    .loginBox{
         top: 50%;
         left: 50%;
     }

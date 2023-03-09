@@ -1,8 +1,14 @@
 import { Initial, TabTitle } from '../GeneralFunctions';
 import styles from './ErrorPages.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Error404 () {
     TabTitle("Mancunify - 404");
+
+    const goBack = () => {
+        window.history.back();
+    }
+
     return (
         <>
             <Initial />
@@ -15,8 +21,10 @@ export default function Error404 () {
                     </div>
                 </div>
                 <div className={styles.btn}>
-                    <div className={styles.homepageBtn}>My Dashboard</div>
-                    <div className={styles.goBackBtn}>Go Back</div>
+                    <Link to="/dashboard">
+                        <button type="button" className={styles.homepageBtn}>My Dashboard</button>
+                    </Link>
+                    <button type="button" className={styles.goBackBtn} onClick={goBack}>Go Back</button>
                 </div>
             </div>
         </>

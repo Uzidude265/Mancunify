@@ -9,6 +9,11 @@ import Account from './pages/Account.js';
 import Profile from './pages/Profile.js';
 import OTP from './pages/OTP.js';
 import './App.css';
+import Error404 from "./pages/404";
+import Error403 from "./pages/403";
+import Error429 from "./pages/429";
+import Error500 from "./pages/500";
+import Error502 from "./pages/502";
 
 //  Code for the fancier OTP page
 //  import OTPFancy from './pages/OTPFancy.js';
@@ -29,6 +34,11 @@ function App() {
         <Route path="account" element={<Account/>} />
         <Route path="profile" element={<Profile/>} />
         <Route path="otp" element={<OTP/>} />
+        <Route path='*' element={<Error404/>} />
+        <Route path="403" element={<Error403/>} />
+        <Route path="429" element={<Error429/>} />
+        <Route path="500" element={<Error500/>} />
+        <Route path="502" element={<Error502/>} />
       </Routes>
     </BrowserRouter>
   );

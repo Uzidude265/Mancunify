@@ -1,7 +1,7 @@
 import { Initial, TabTitle } from '../GeneralFunctions';
 import styles from './ErrorPages.module.css';
 
-export default function error403 () {
+export default function Error403 () {
     TabTitle("Mancunify - 403");
     return (
         <>
@@ -15,7 +15,7 @@ export default function error403 () {
                     </div>
                 </div>
                 <div className={styles.btn}>
-                    <div className={styles.homepageBtn}>Homepage</div>
+                    <div className={styles.homepageBtn}>My Dashboard</div>
                     <div className={styles.goBackBtn}>Go Back</div>
                 </div>
             </div>

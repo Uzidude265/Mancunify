@@ -1,12 +1,14 @@
 import { Initial, TabTitle } from '../GeneralFunctions';
 import styles from './ErrorPages.module.css';
-import { Link } from 'react-router-dom';
 
 export default function Error500 () {
     TabTitle("Mancunify - 500");
 
     const goBack = () => {
         window.history.back();
+    }
+    const goToDashboard = () => {
+        window.location.href = '/dashboard';
     }
 
     return (
@@ -21,9 +23,7 @@ export default function Error500 () {
                     </div>
                 </div>
                 <div className={styles.btn}>
-                    <Link to="/dashboard">
-                        <button type="button" className={styles.homepageBtn}>My Dashboard</button>
-                    </Link>
+                    <button type="button" className={styles.myDashboardBtn} onClick={goToDashboard}>My Dashboard</button>
                     <button type="button" className={styles.goBackBtn} onClick={goBack}>Go Back</button>
                 </div>
             </div>

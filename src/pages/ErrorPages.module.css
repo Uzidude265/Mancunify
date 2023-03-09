@@ -49,7 +49,7 @@
     padding-right: 378px;
     padding-left: 378px;
 }
-.homepageBtn {
+.myDashboardBtn {
     display: flex;
     flex-direction: column;
     max-width: 89px;

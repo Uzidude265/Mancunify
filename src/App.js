@@ -8,6 +8,7 @@ import Friends from './pages/Friends.js';
 import Account from './pages/Account.js';
 import Profile from './pages/Profile.js';
 import OTP from './pages/OTP.js';
+import AccountCreation from './pages/AccountCreation.js';
 import './App.css';
 
 //  Code for the fancier OTP page
@@ -29,6 +30,7 @@ function App() {
         <Route path="account" element={<Account/>} />
         <Route path="profile" element={<Profile/>} />
         <Route path="otp" element={<OTP/>} />
+        <Route path="create" element={<AccountCreation />} />
       </Routes>
     </BrowserRouter>
   );

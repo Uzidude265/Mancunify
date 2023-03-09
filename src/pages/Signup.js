@@ -23,7 +23,7 @@ export default function Login() {
         const errorBox = document.querySelector(`.${styles.errorBox}`);
 
         //  Regex for student email
-        const regex = /[\w-]+@student.manchester.ac.uk/;
+        const regex = /[\w-]+@student.manchester.ac.uk$/;
 
         //  React runs this function on page start so this prevents that
         if (email !== "" && password !== "" && rePassword !== "") {

@@ -9,7 +9,7 @@
     height: 15.5em;
 }
 
-.signupBox{
+.createBox{
     position: absolute;
     top: 65%;
     left: 50%;
@@ -18,7 +18,7 @@
     border-style: solid;
     border-color: rgba(0, 0, 0, 1);
     border-radius: 1.5em;
-    width: 25em;
+    width: 40em;
 }
 
 .title{
@@ -27,9 +27,15 @@
     border-bottom: 0.05em solid black;
 }
 
-.signupArea{
+.createArea{
     padding: 1em 3em;
     box-sizing: border-box;
+    height: 20em;
+    overflow-y: auto;
+}
+
+.bottomArea{
+    padding: 0 3em 1em 3em;
 }
 
 .errorBox{
@@ -50,7 +56,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.inputField input:focus{
+.inputField textarea{
+    margin: 1em 0;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    resize: none;
+}
+
+.inputField input:focus,
+.inputField textArea:focus{
     outline: none;
 }
 

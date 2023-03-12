@@ -121,7 +121,7 @@
     color: red;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 47em) {
 
     .logo{
         opacity: 0%;

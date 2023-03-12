@@ -93,27 +93,13 @@
     background-color: red;
 }
 
-.login{
-    text-align: center;
-    margin: 1.5em 0 1em 0;
-}
-
-.loginLink, .loginLink:link{
-    color: blue;
-    text-decoration: none;
-}
-
-.loginLink:hover{
-    color: red;
-}
-
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 50em) {
 
     .logo{
         opacity: 0%;
     }
 
-    .signupBox{
+    .createBox{
         top: 50%;
         left: 50%;
     }

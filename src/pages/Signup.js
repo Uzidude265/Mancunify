@@ -1,10 +1,13 @@
 import styles from './Signup.module.css';
 import { LogoImage, Initial, TabTitle } from '../GeneralFunctions.js';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
     TabTitle("Mancunify - Signup");
+
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -48,7 +51,7 @@ export default function Login() {
             //  If email is valid and passwords match, redirect to OTP page (needs to be made)
             else {
                 errorBox.style.display = "none";
-                window.location.href = "/otp";
+                navigate("/otp", {state: {email: email, password: password}});
             }
 
         }

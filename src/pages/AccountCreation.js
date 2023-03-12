@@ -1,10 +1,26 @@
 import styles from './AccountCreation.module.css';
 import { LogoImage, Initial, TabTitle } from '../GeneralFunctions.js';
 import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function AccountCreation() {
 
     TabTitle("Mancunify - Create Account");
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    //  If they somehow get to this website without submitting their email and password
+    let email;
+    let password;
+    try {
+        email = location.state.email;
+        password = location.state.password;
+    }
+    catch(e) {
+        console.log("Error");
+        navigate("/signup");
+    }
 
     const [nickname, setNickname] = useState("");
     const [about, setAbout] = useState("");
@@ -21,43 +37,18 @@ export default function AccountCreation() {
         setYear(e.target.year.value);
     }
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     //  Get the error box class
-    //     const errorBox = document.querySelector(`.${styles.errorBox}`);
+        //  Get the error box class
+        const errorBox = document.querySelector(`.${styles.errorBox}`);
 
-    //     //  Regex for student email
-    //     const regex = /[\w-]+@student.manchester.ac.uk/;
+        //  React runs this function on page start so this prevents that
+        if (nickname !== "" || about !== "" || department !== "" || course !== "" || year !== "") {
+            errorBox.textContent = "Worked!"
+            errorBox.style.display = "block";
+        }
 
-    //     //  React runs this function on page start so this prevents that
-    //     if (email !== "" && password !== "" && rePassword !== "") {
-
-    //         //  If passwords do not match, show error
-    //         if (password !== rePassword) {
-    //             errorBox.textContent = "Passwords do not match";
-    //             errorBox.style.display = "block";
-    //         }
-    //         //  If email is not a student email, show error
-    //         else if (!regex.test(email)) {
-    //             errorBox.textContent = "Email is not a student email";
-    //             errorBox.style.display = "block";
-    //         }
-
-    //         //  Need to attempt to send email here somehow
-    //         //  If email didn't go through, show error
-    //         else if (email === "failed@student.manchester.ac.uk") {
-    //             errorBox.textContent = "Email is invalid";
-    //             errorBox.style.display = "block";
-    //         }
-    //         //  If email is valid and passwords match, redirect to OTP page (needs to be made)
-    //         else {
-    //             errorBox.style.display = "none";
-    //             window.location.href = "/otp";
-    //         }
-
-    //     }
-
-    // })
+    })
 
     return (
         <>
@@ -66,19 +57,19 @@ export default function AccountCreation() {
         <a href="/"><LogoImage style={styles}/></a>
         <div className={styles.createBox}>
             <h1 className={styles.title}>Create Account:</h1>
-            <form className={styles.createArea} onSubmit={handleSubmit}>
-                <div className={styles.errorBox}></div>
+            <div className={styles.errorBox}/>
+            <form className={styles.createArea} id="account" onSubmit={handleSubmit}>
                 <div className={styles.inputField}>
                 <label>Nickname</label>
                 <input type="text" name="nickname" required />
                 </div>
                 <div className={styles.inputField}>
                 <label>University Email</label>
-                <input type="text" name="email" disabled />
+                <input type="text" name="email" value={email} disabled />
                 </div>
                 <div className={styles.inputField}>
                 <label>Password</label>
-                <input type="password" name="password" disabled />
+                <input type="password" name="password" value={password} disabled />
                 </div>
                 <div className={styles.inputField}>
                 <label>About (optional)</label>
@@ -98,10 +89,7 @@ export default function AccountCreation() {
                 </div>
             </form>
             <div className={styles.bottomArea}>
-                <input className={styles.btn} type="Submit" defaultValue="Create Account" />
-                {/* <div className={styles.login}>
-                Already have an account? <a className={styles.loginLink} href="/login">Log in</a>
-                </div> */}
+                <input className={styles.btn} form="account" type="Submit" defaultValue="Create Account" />
             </div>
         </div>
 
